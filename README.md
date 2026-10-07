@@ -63,11 +63,12 @@ v0.1
 [x] JSON 导出
 [x] LocalStorage 自动保存
 [x] GitHub Pages 在线部署
-v0.1.1
-[ ] 增加补充设定
-[ ] 增加 System Prompt
-[ ] 优化角色卡输出格式
-[ ] 优化 README
+### v0.1.1
+
+- [x] 增加补充设定
+- [x] 增加 System Prompt
+- [x] 优化角色卡输出格式
+- [x] 优化 README
 后续计划
 [ ] JSON 导入
 [ ] 多角色保存
