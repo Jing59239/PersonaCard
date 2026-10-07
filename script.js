@@ -7,7 +7,9 @@ const fields = {
     personality: document.getElementById("personality"),
     speakingStyle: document.getElementById("speakingStyle"),
     userName: document.getElementById("userName"),
-    openingMessage: document.getElementById("openingMessage")
+    openingMessage: document.getElementById("openingMessage"),
+    extraSetting: document.getElementById("extraSetting"),
+    systemPrompt: document.getElementById("systemPrompt")
 };
 
 const preview = {
@@ -16,7 +18,9 @@ const preview = {
     personality: document.getElementById("previewPersonality"),
     speakingStyle: document.getElementById("previewSpeakingStyle"),
     userName: document.getElementById("previewUserName"),
-    openingMessage: document.getElementById("previewOpeningMessage")
+    openingMessage: document.getElementById("previewOpeningMessage"),
+    extraSetting: document.getElementById("previewExtraSetting"),
+    systemPrompt: document.getElementById("previewSystemPrompt")
 };
 
 const copyButton = document.getElementById("copyButton");
@@ -31,7 +35,9 @@ function getCharacterData() {
         personality: fields.personality.value.trim(),
         speakingStyle: fields.speakingStyle.value.trim(),
         userName: fields.userName.value.trim(),
-        openingMessage: fields.openingMessage.value.trim()
+        openingMessage: fields.openingMessage.value.trim(),
+        extraSetting: fields.extraSetting.value.trim(),
+        systemPrompt: fields.systemPrompt.value.trim()
     };
 }
 
@@ -57,6 +63,12 @@ function updatePreview() {
 
     preview.openingMessage.textContent =
         data.openingMessage || "暂未填写";
+
+    preview.extraSetting.textContent =
+        data.extraSetting || "暂未填写";
+
+    preview.systemPrompt.textContent =
+        data.systemPrompt || "暂未填写";
 
     saveCharacter();
 }
@@ -117,7 +129,13 @@ ${data.speakingStyle || "暂未填写"}
 ${data.userName || "暂未填写"}
 
 开场白：
-${data.openingMessage || "暂未填写"}`;
+${data.openingMessage || "暂未填写"}
+
+补充设定：
+${data.extraSetting || "暂未填写"}
+
+System Prompt：
+${data.systemPrompt || "暂未填写"}`;
 }
 
 
