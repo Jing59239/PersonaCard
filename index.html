@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PersonaCard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>PersonaCard</h1>
+        <p>Create AI characters, simply.</p>
+    </header>
+
+    <main>
+
+        <section class="editor">
+
+            <h2>角色设定</h2>
+
+            <label for="name">角色名称</label>
+            <input
+                id="name"
+                type="text"
+                placeholder="例如：Monika"
+            >
+
+            <label for="background">身份背景</label>
+            <textarea
+                id="background"
+                placeholder="角色是谁？有什么经历？"
+            ></textarea>
+
+            <label for="personality">性格</label>
+            <textarea
+                id="personality"
+                placeholder="例如：温柔、自信、成熟……"
+            ></textarea>
+
+            <label for="speakingStyle">说话方式</label>
+            <textarea
+                id="speakingStyle"
+                placeholder="角色平时怎样说话？"
+            ></textarea>
+
+            <label for="userName">对用户的称呼</label>
+            <input
+                id="userName"
+                type="text"
+                placeholder="例如：你、玩家、名字……"
+            >
+
+            <label for="openingMessage">开场白</label>
+            <textarea
+                id="openingMessage"
+                placeholder="第一次聊天时角色会说什么？"
+            ></textarea>
+
+        </section>
+
+        <section class="preview">
+
+            <h2>角色卡预览</h2>
+
+            <div id="characterCard">
+
+                <h3 id="previewName">未命名角色</h3>
+
+                <h4>身份背景</h4>
+                <p id="previewBackground">暂未填写</p>
+
+                <h4>性格</h4>
+                <p id="previewPersonality">暂未填写</p>
+
+                <h4>说话方式</h4>
+                <p id="previewSpeakingStyle">暂未填写</p>
+
+                <h4>对用户的称呼</h4>
+                <p id="previewUserName">暂未填写</p>
+
+                <h4>开场白</h4>
+                <p id="previewOpeningMessage">暂未填写</p>
+
+            </div>
+
+            <div class="actions">
+                <button id="copyButton">
+                    复制角色卡
+                </button>
+
+                <button id="exportButton">
+                    导出 JSON
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>PersonaCard · Open Source Character Card Generator</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
